@@ -83,7 +83,7 @@ async def on_message(message):
 		await message.delete()
 		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
 	if msg in csgome:
-		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
+		await message.author.send(f'Напиши LiPToN и позови играть его в кс')
 #join
 @client.command()
 async def join(ctx):
