@@ -1,6 +1,7 @@
 import discord 
 from discord.ext import commands
 from discord.utils import get 
+import os
 
 PREFIX = '/'
 client = commands.Bot(command_prefix = PREFIX)
@@ -106,5 +107,5 @@ async def leave(ctx):
 		await ctx.send (f'Бот отключился от канала:{channel}')
 
 #Connect
-token = open('token.txt', 'r').readline()
+token = os.environ.get('BOT_GET')
 client.run( token )
