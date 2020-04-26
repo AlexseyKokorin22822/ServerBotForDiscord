@@ -108,4 +108,4 @@ async def leave(ctx):
 
 #Connect
 token = os.environ.get('BOT_GET')
-client.run( token )
+client.run( str(token) )
