@@ -83,7 +83,7 @@ async def on_message(message):
 		await message.delete()
 		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
 	elif msg in csgome:
-		arg = <'@435609317727797249'>
+		arg = "<@435609317727797249>"
 		await ctx.send(arg)
 
 #join
