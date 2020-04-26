@@ -7,7 +7,7 @@ PREFIX = '/'
 client = commands.Bot(command_prefix = PREFIX)
 bad_words = ['пидор', 'хуйло' , 'блять','пиздец','ахуеть', 'нихуя', 'сука', 'нихуя', 'пидорас',
  'гондон', 'гандон', 'чмо', 'ебать', 'вахуе', 'в ахуе', 'ска', 'ебаный в рот', 'хули']
-csgome = ['го кс', 'гокс', 'gocs', 'go cs', 'cs', 'кс', 'катать', '']
+csgome = ['го кс', 'гокс', 'gocs', 'go cs', 'cs', 'кс', 'катать']
 
 
 #/help
@@ -82,8 +82,6 @@ async def on_message(message):
 	if msg in bad_words:
 		await message.delete()
 		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
-	elif msg in csgome:
-		await message.сhannel.send('<@435609317727797249>')
 
 #join
 @client.command()
