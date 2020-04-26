@@ -82,7 +82,8 @@ async def on_message(message):
 	if msg in bad_words:
 		await message.delete()
 		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
-
+	if msg in csgome:
+		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
 #join
 @client.command()
 async def join(ctx):
