@@ -7,6 +7,7 @@ PREFIX = '/'
 client = commands.Bot(command_prefix = PREFIX)
 bad_words = ['пидор', 'хуйло' , 'блять','пиздец','ахуеть', 'нихуя', 'сука', 'нихуя', 'пидорас',
  'гондон', 'гандон', 'чмо', 'ебать', 'вахуе', 'в ахуе', 'ска', 'ебаный в рот', 'хули']
+csgome = ['го кс', 'гокс', 'gocs', 'go cs', 'cs', 'кс', 'катать', '']
 
 #/help
 @client.event 
@@ -41,7 +42,7 @@ async def csgo( ctx, arg ):
 
 #callplayingta5
 @client.command( pass_context = True)
-async def gta5( ctx, *,arg ):
+async def gta5( ctx,arg ):
 	await ctx.channel.purge( limit = 1)
 	emb = discord.Embed(title = 'GTA 5')
 	emb.add_field (name = 'Прекрастный человек <<'+ ctx.author.name +'>> зовет играть ', value = f'Дорогой {arg} заходи чилить в GTA 5')
@@ -80,6 +81,14 @@ async def on_message(message):
 	if msg in bad_words:
 		await message.delete()
 		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
+
+@client.event
+async def on_message(message):
+	await client.process_commands(message)
+	arg = <'@LiPToN#9438'>
+	msg = message.content.lower()
+	if msg in csgome:
+		await ctx.send(arg)
 
 #join
 @client.command()
