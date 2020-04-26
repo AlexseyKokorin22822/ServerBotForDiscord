@@ -9,6 +9,7 @@ bad_words = ['пидор', 'хуйло' , 'блять','пиздец','ахуе�
  'гондон', 'гандон', 'чмо', 'ебать', 'вахуе', 'в ахуе', 'ска', 'ебаный в рот', 'хули']
 csgome = ['го кс', 'гокс', 'gocs', 'go cs', 'cs', 'кс', 'катать', '']
 
+
 #/help
 @client.event 
 async def on_ready():
@@ -81,13 +82,8 @@ async def on_message(message):
 	if msg in bad_words:
 		await message.delete()
 		await message.author.send(f'{message.author.name}, слушай не пиши такие сообщения иначе бан!')
-
-@client.event
-async def on_message(message):
-	await client.process_commands(message)
-	arg = <'@LiPToN#9438'>
-	msg = message.content.lower()
-	if msg in csgome:
+	elif msg in csgome:
+		arg = <'@435609317727797249'>
 		await ctx.send(arg)
 
 #join
